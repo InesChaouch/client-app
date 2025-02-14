@@ -81,6 +81,9 @@ this.initializeUploader();
       const updatedMember = { ...this.member() }
       updatedMember.photos.push(photo);
       this.memberChange.emit(updatedMember);
+      if(photo.main) {
+     this.setMainPhoto(photo);
+      }
     }
   }
 }
