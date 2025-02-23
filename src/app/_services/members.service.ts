@@ -30,7 +30,6 @@ export class MembersService {
 
     if(response) return setPaginatedResponse(response, this.paginatedResult);
 
-    console.log(Object.values(this.userParams).join('-'));
     let params = setPaginationHeaders(this.userParams().pageNumber, this.userParams().pageSize);
 
     params = params.append("minAge", this.userParams().minAge);
